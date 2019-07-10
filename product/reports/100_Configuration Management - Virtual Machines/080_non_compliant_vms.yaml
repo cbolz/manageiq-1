@@ -1,0 +1,60 @@
+---
+title: Non-Compliant VMs
+rpt_group: Custom
+rpt_type: Custom
+priority: 
+db: Vm
+cols:
+- name
+- last_scan_on
+- last_compliance_status
+- last_compliance_timestamp
+include: {}
+col_order:
+- name
+- last_scan_on
+- last_compliance_status
+- last_compliance_timestamp
+headers:
+- Name
+- Last Analysis Time
+- Last Compliance Status
+- Last Compliance Timestamp
+conditions: 
+order: Ascending
+sortby:
+- last_compliance_timestamp
+group: 
+graph: 
+dims: 
+filename: 
+file_mtime: 
+categories: []
+timeline: 
+template_type: report
+where_clause: 
+db_options: {}
+generate_cols: 
+generate_rows: 
+col_formats:
+- 
+- 
+- 
+- 
+tz: 
+time_profile_id: 
+display_filter: 
+col_options:
+  :last_compliance_status:
+    :style:
+    - :class: :miq_rpt_green_text
+      :operator: "="
+      :value: true
+    - :class: :miq_rpt_red_text
+      :operator: "="
+      :value: 'false'
+rpt_options:
+  :pdf:
+    :page_size: US-Letter
+  :queue_timeout: 
+menu_name: Non-Compliant VMs
